@@ -21,6 +21,11 @@ These scripts must be placed in the same machine as the ndjbdns server.
 * **batch.pl** - Batch processing for several domains. It takes one parameter:
   * --file the path of a file listing, one per line, the domains to be processed.
 
+## Dependencies
+
+* [Getopt::Long](https://perldoc.perl.org/Getopt::Long)
+* [ndjbdns-scripts](https://github.com/rgglez/ndjbdns-scripts)
+
 ## Notes
 
 * You must adjust the paths as you need.
