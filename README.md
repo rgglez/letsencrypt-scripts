@@ -7,7 +7,7 @@
 
 Some helper scripts for Let's Encrypt administration. These scripts use DNS authentication for the requests. 
 It works with the [ndjbdns](https://github.com/pjps/ndjbdns) server, assuming that each domain has an independent 
-zone file (see [my scripts](https://github.com/rgglez/ndjbdns-scripts) for working with these configurations).
+zone file (see [my scripts](https://github.com/rgglez/ndjbdns-scripts) for working with this configuration).
 
 These scripts must be placed in the same machine as the ndjbdns server.
 
