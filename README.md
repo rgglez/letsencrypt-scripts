@@ -6,20 +6,22 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/rgglez/letsencrypt-scripts)
 
 Some helper scripts for Let's Encrypt administration. These scripts use DNS authentication for the requests. 
-It works with the [ndjbdns](https://github.com/pjps/ndjbdns) server, assuming that each domain has an independent 
-zone file (see [my scripts](https://github.com/rgglez/ndjbdns-scripts) for working with this configuration).
+
+It works with the [ndjbdns](https://github.com/pjps/ndjbdns) server, assuming that each domain has an independent zone file (see [my scripts](https://github.com/rgglez/ndjbdns-scripts) for working with this configuration).
 
 These scripts must be placed in the same machine as the ndjbdns server.
 
 ## Scripts
 
-* **auth_ndjbdns.sh** - Generates the TXT record for the authentication, in the DNS zone file. This assumes that there're one zone file per domain.
-* **cleanup_ndjbdns.sh** - Removes the TXT record from the DNS zone file, after request is completed.
-* **certbot.pl** - Executes the certbot request. It takes 2 parameters:
-  * --domains a string listing the domains, for instance: "example.com *.example.com"
-  * --email your e-mail address.
-* **batch.pl** - Batch processing for several domains. It takes one parameter:
-  * --file the path of a file listing, one per line, the domains to be processed.
+* [```auth_ndjbdns.sh```](src/auth_ndjbdns.sh) - Generates the TXT record for the authentication, in the DNS zone file. This assumes that there's one zone file per domain.
+* [```cleanup_ndjbdns.sh```](src/cleanup_ndjbdns.sh) - Removes the TXT record from the DNS zone file, after request is completed.
+* [```certbot.pl```](src/certbot.pl) - Executes the certbot request. It takes 2 parameters:
+  * ```--domains``` a string listing the domains, for instance: "example.com *.example.com"
+  * ```--email``` your e-mail address.
+* [```batch.pl```](src/batch.pl) - Batch processing for several domains. It takes one parameter:
+  * ```--file``` the path of a file listing, one per line, the domains to be processed.
+* [```privrsa.sh```](src/privrsa.sh) generates a .rsa file suitable for Aliyun Certificate Manager.
+* [```fixfullchain.sh```](src/fixfullchain.sh) generates a fullchain suitable for Aliyun.
 
 ## Dependencies
 
@@ -34,4 +36,4 @@ These scripts must be placed in the same machine as the ndjbdns server.
 
 Copyright (c) 2020, Rodolfo González González.
 
-Read the LICENSE file.
+Licensed under [GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html). Read the [LICENSE](LICENSE) file.
