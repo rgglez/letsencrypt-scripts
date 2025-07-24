@@ -13,15 +13,15 @@ These scripts must be placed in the same machine as the ndjbdns server.
 
 ## Scripts
 
-* [```auth_ndjbdns.sh```](src/auth_ndjbdns.sh) - Generates the TXT record for the authentication, in the DNS zone file. This assumes that there's one zone file per domain.
-* [```cleanup_ndjbdns.sh```](src/cleanup_ndjbdns.sh) - Removes the TXT record from the DNS zone file, after request is completed.
-* [```certbot.pl```](src/certbot.pl) - Executes the certbot request. It takes 2 parameters:
+* ```auth_ndjbdns.sh``` - Generates the TXT record for the authentication, in the DNS zone file. This assumes that there's one zone file per domain.
+* ```cleanup_ndjbdns.sh``` - Removes the TXT record from the DNS zone file, after request is completed.
+* ```certbot.pl``` - Executes the certbot request. It takes 2 parameters:
   * ```--domains``` a string listing the domains, for instance: "example.com *.example.com"
   * ```--email``` your e-mail address.
-* [```batch.pl```](src/batch.pl) - Batch processing for several domains. It takes one parameter:
+* ```batch.pl``` - Batch processing for several domains. It takes one parameter:
   * ```--file``` the path of a file listing, one per line, the domains to be processed.
-* [```privrsa.sh```](src/privrsa.sh) generates a .rsa file suitable for Aliyun Certificate Manager.
-* [```fixfullchain.sh```](src/fixfullchain.sh) generates a fullchain suitable for Aliyun.
+* ```privrsa.sh``` generates a .rsa file suitable for Aliyun Certificate Manager.
+* ```fixfullchain.sh``` generates a fullchain suitable for Aliyun.
 
 ## Dependencies
 
